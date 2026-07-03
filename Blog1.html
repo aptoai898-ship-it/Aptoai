@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Apto AI CRM | AI Lead Management & Sales Automation Software</title>
+
+  <meta name="description" content="Apto AI is an AI CRM platform for lead management, sales automation, follow-up tracking, pipeline visibility, enquiry handling, and better sales conversion." />
+
+  <meta name="keywords" content="Apto AI, aptoai.app, AI CRM, AI Lead Management Software, Sales Automation CRM, Follow Up Automation, Pipeline Management CRM, Enquiry Management Software, Lead Tracking CRM" />
+
+  <link rel="canonical" href="https://aptoai.app/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <style>
+    :root {
+      --bg: #fffaf8;
+      --white: #ffffff;
+      --primary: #6e2142;
+      --secondary: #b75d69;
+      --accent: #f1d4c7;
+      --dark: #2f1a22;
+      --text: #433039;
+      --muted: #7b6670;
+      --border: #efd9d2;
+      --soft: #fff2ed;
+      --shadow: 0 14px 40px rgba(110, 33, 66, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #fffaf8 0%, #fff5f0 100%);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .topbar {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 10px 18px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .topbar a {
+      color: #ffe7da;
+      font-weight: 700;
+      margin: 0 8px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .hero-left {
+      background: linear-gradient(135deg, #fff5ef, #ffe8df);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 42px 34px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left::before {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: -70px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(183, 93, 105, 0.10);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--secondary);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-left h1 {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.08;
+      color: var(--dark);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-left p {
+      margin: 0 0 22px;
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 700px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-soft {
+      background: var(--accent);
+      color: var(--dark);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .hero-right {
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 100%;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      background: var(--white);
+      position: relative;
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .hero-overlay h3 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    .hero-overlay p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .floating-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 0 0 28px;
+    }
+
+    .float-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 20px 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    .float-card h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: var(--primary);
+    }
+
+    .float-card p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 34px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.04);
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 4vw, 36px);
+      line-height: 1.18;
+      color: var(--dark);
+    }
+
+    .section-subtext {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #fff8f5, #fff1ea);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--secondary);
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    .highlight-box strong {
+      color: var(--primary);
+    }
+
+    .highlight-box a {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .rounded-image {
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      background: var(--soft);
+    }
+
+    .rounded-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .service-card {
+      background: var(--soft);
+      border-radius: 20px;
+      padding: 22px 18px;
+      border: 1px solid var(--border);
+    }
+
+    .service-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--primary);
+    }
+
+    .service-card p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .service-list div {
+      background: #fff8f5;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .service-list div::before {
+      content: "• ";
+      color: var(--secondary);
+      font-weight: 900;
+    }
+
+    .areas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .area-chip {
+      background: var(--soft);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .timeline-card {
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px 16px;
+      position: relative;
+    }
+
+    .timeline-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .timeline-card h3 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 17px;
+    }
+
+    .timeline-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, var(--primary), #8c3756);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 {
+      margin: 0 0 16px;
+      color: #ffffff;
+      font-size: 30px;
+    }
+
+    .contact-card p {
+      margin: 0 0 14px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .contact-card a {
+      color: #ffe3d5;
+      font-weight: 700;
+    }
+
+    .crm-preview {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 100%;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+    }
+
+    .preview-row {
+      display: grid;
+      grid-template-columns: 46px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      background: #fff8f5;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .preview-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .preview-row strong {
+      display: block;
+      color: var(--dark);
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .preview-row small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .preview-tag {
+      background: var(--accent);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      background: #fff9f6;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .faq-item a {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, #6e2142, #c06b77);
+      color: #ffffff;
+      text-align: center;
+      padding: 42px 22px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta-banner::before {
+      content: "";
+      position: absolute;
+      left: -60px;
+      bottom: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .cta-banner h2 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      font-size: clamp(26px, 4vw, 40px);
+    }
+
+    .cta-banner p {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto 20px;
+      color: rgba(255,255,255,0.92);
+      font-size: 16px;
+    }
+
+    .cta-buttons {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding: 22px 10px 4px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-note a {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    @media (max-width: 992px) {
+      .hero,
+      .two-col,
+      .contact-layout,
+      .services-grid,
+      .timeline,
+      .floating-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-right img {
+        min-height: 320px;
+      }
+
+      .rounded-image img {
+        height: 280px;
+      }
+
+      .preview-row {
+        grid-template-columns: 46px 1fr;
+      }
+
+      .preview-tag {
+        grid-column: 1 / -1;
+        width: fit-content;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 14px 12px 34px;
+      }
+
+      .hero-left,
+      .section,
+      .contact-card,
+      .crm-preview,
+      .cta-banner {
+        border-radius: 22px;
+      }
+
+      .hero-left,
+      .section {
+        padding: 26px 18px;
+      }
+
+      .hero-buttons,
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <strong>Apto AI</strong> |
+    <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Main Website</a> |
+    <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">AI CRM</a> |
+    <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Lead Management</a>
+  </div>
+
+  <div class="page">
+
+    <section class="hero">
+      <div class="hero-left">
+        <span class="hero-badge">AI CRM • Lead Management • Sales Automation</span>
+
+        <h1>AI CRM Software for Smarter Lead Management & Follow-Up Automation</h1>
+
+        <p>
+          Welcome to <strong>Apto AI</strong> — an intelligent CRM platform made for businesses that want to organize
+          enquiries, manage sales activity, track follow-ups, and convert more leads with a clear workflow.
+        </p>
+
+        <p>
+          From new enquiry capture to lead ownership, priority tracking, follow-up reminders, and pipeline visibility,
+          Apto AI helps your team stay focused on the right sales action.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+          <a class="btn btn-outline" href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Explore AI CRM</a>
+          <a class="btn btn-soft" href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Request Demo</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=80" alt="Apto AI CRM software for lead management and sales automation" />
+
+        <div class="hero-overlay">
+          <h3>Lead Control in One Place</h3>
+          <p>Capture, qualify, assign, follow up, and track every business enquiry through a smarter CRM workflow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="floating-cards">
+      <div class="float-card">
+        <h3>Lead Capture</h3>
+        <p>Bring enquiries from different sources into one structured CRM system.</p>
+      </div>
+
+      <div class="float-card">
+        <h3>Follow-Up Control</h3>
+        <p>Keep reminders, callbacks, and next actions clear for your sales team.</p>
+      </div>
+
+      <div class="float-card">
+        <h3>Pipeline Visibility</h3>
+        <p>Track where each lead stands and what action is pending next.</p>
+      </div>
+
+      <div class="float-card">
+        <h3>Team Ownership</h3>
+        <p>Assign leads properly so no opportunity is missed or ignored.</p>
+      </div>
+    </section>
+
+    <section class="section two-col">
+      <div>
+        <h2 class="section-title">AI Lead Management Software for Growing Businesses</h2>
+
+        <p class="section-subtext">
+          Apto AI is built for businesses that receive regular enquiries and need a better way to manage them.
+          Instead of depending on spreadsheets, scattered WhatsApp messages, missed calls, or manual reminders,
+          your team gets a CRM system where every lead can be tracked with clarity.
+        </p>
+
+        <p>
+          With <strong>Apto AI CRM</strong>, you can manage enquiry details, lead source, conversation stage,
+          assigned team member, follow-up status, and sales progress in a more organized way.
+          Visit the official website:
+          <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">https://aptoai.app/</a>
+        </p>
+
+        <div class="highlight-box">
+          <strong>Need better lead handling?</strong> Apto AI helps businesses reduce missed follow-ups,
+          improve response discipline, and give sales teams a clear view of every active opportunity.
+          Explore more at
+          <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">aptoai.app</a>.
+        </div>
+      </div>
+
+      <div class="rounded-image">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="AI lead management software by Apto AI" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Sales Automation CRM for Better Follow-Up Discipline</h2>
+
+      <p class="section-subtext">
+        Apto AI supports businesses where timely response and consistent follow-up matter. Whether you manage
+        real estate enquiries, service leads, consultation requests, B2B sales conversations, or appointment-based
+        leads, the platform helps keep the complete process organized.
+      </p>
+
+      <p>
+        Apto AI works as a practical <strong>sales automation CRM</strong> by helping teams plan follow-ups,
+        prioritize interested prospects, assign responsibility, and move opportunities through a clear sales pipeline.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Enquiry Management</h3>
+          <p>Keep lead details organized from the first enquiry so your team has the right information before calling.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Lead Priority</h3>
+          <p>Understand which prospects need faster attention and avoid treating every enquiry the same way.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Sales Follow-Up</h3>
+          <p>Plan next actions, track pending tasks, and reduce the chances of missed callbacks or delayed responses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section two-col">
+      <div class="rounded-image">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80" alt="Apto AI sales automation CRM and pipeline management" />
+      </div>
+
+      <div>
+        <h2 class="section-title">Apto AI CRM Services & Platform Capabilities</h2>
+
+        <p class="section-subtext">
+          Apto AI helps businesses build a more disciplined sales process with CRM features that support daily lead
+          handling, team coordination, and follow-up tracking.
+        </p>
+
+        <div class="service-list">
+          <div>AI CRM Software</div>
+          <div>Lead Management CRM</div>
+          <div>Sales Automation CRM</div>
+          <div>Follow-Up Automation</div>
+          <div>Enquiry Management</div>
+          <div>Pipeline Tracking</div>
+          <div>Lead Assignment</div>
+          <div>Sales Activity Tracking</div>
+          <div>Team Workflow Visibility</div>
+          <div>Lead Conversion Support</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Who Can Use Apto AI?</h2>
+
+      <p class="section-subtext">
+        Apto AI is useful for businesses where leads, calls, callbacks, demos, meetings, consultations, or sales
+        conversations need to be managed properly.
+      </p>
+
+      <div class="areas">
+        <span class="area-chip">Real Estate Teams</span>
+        <span class="area-chip">Marketing Agencies</span>
+        <span class="area-chip">Education Institutes</span>
+        <span class="area-chip">Healthcare Clinics</span>
+        <span class="area-chip">B2B Companies</span>
+        <span class="area-chip">Service Businesses</span>
+        <span class="area-chip">Sales Teams</span>
+        <span class="area-chip">Consultation Businesses</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">How Apto AI Helps Your Sales Process</h2>
+
+      <p class="section-subtext">
+        The platform keeps the sales journey simple, trackable, and action-focused.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-card">
+          <div class="timeline-number">1</div>
+          <h3>Capture</h3>
+          <p>New enquiries are collected and organized with source, contact, and requirement details.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-number">2</div>
+          <h3>Qualify</h3>
+          <p>Prospects can be reviewed based on interest, urgency, and sales potential.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-number">3</div>
+          <h3>Assign</h3>
+          <p>Leads can be given to the right team member for timely ownership and communication.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-number">4</div>
+          <h3>Convert</h3>
+          <p>Follow-ups, pipeline updates, and next actions help move the lead toward conversion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-layout">
+      <div class="contact-card">
+        <h2>Connect with Apto AI</h2>
+
+        <p>
+          <strong>Official Website:</strong>
+          <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">https://aptoai.app/</a>
+        </p>
+
+        <p>
+          <strong>Platform Type:</strong> AI CRM, Lead Management CRM, Sales Automation CRM, and Follow-Up Management Software.
+        </p>
+
+        <p>
+          <strong>Best For:</strong> Businesses that want better enquiry control, faster sales response, and clear pipeline visibility.
+        </p>
+
+        <p>
+          <strong>Explore More:</strong>
+          <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Visit Apto AI Main Website</a>
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-outline" href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Open Website</a>
+        </div>
+      </div>
+
+      <div class="crm-preview">
+        <div class="preview-row">
+          <div class="preview-icon">01</div>
+          <div>
+            <strong>Website enquiry added</strong>
+            <small>Lead source, contact details, and requirement captured.</small>
+          </div>
+          <span class="preview-tag">New</span>
+        </div>
+
+        <div class="preview-row">
+          <div class="preview-icon">02</div>
+          <div>
+            <strong>Lead priority updated</strong>
+            <small>Sales team can focus on stronger opportunities first.</small>
+          </div>
+          <span class="preview-tag">Hot</span>
+        </div>
+
+        <div class="preview-row">
+          <div class="preview-icon">03</div>
+          <div>
+            <strong>Assigned to team member</strong>
+            <small>Every lead gets clear ownership and responsibility.</small>
+          </div>
+          <span class="preview-tag">Routed</span>
+        </div>
+
+        <div class="preview-row">
+          <div class="preview-icon">04</div>
+          <div>
+            <strong>Follow-up action planned</strong>
+            <small>Pending calls, reminders, and next steps stay visible.</small>
+          </div>
+          <span class="preview-tag">Action</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What is Apto AI?</h3>
+          <p>
+            Apto AI is an AI-powered CRM platform that helps businesses manage enquiries, sales activity,
+            follow-ups, lead ownership, and pipeline tracking.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How can Apto AI improve lead management?</h3>
+          <p>
+            It gives your team a structured system to capture leads, track conversations, assign responsibility,
+            plan follow-ups, and reduce missed opportunities.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is Apto AI useful for sales teams?</h3>
+          <p>
+            Yes, Apto AI is useful for sales teams that need better visibility over incoming enquiries,
+            pending follow-ups, active leads, and conversion movement.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Where can I explore Apto AI?</h3>
+          <p>
+            You can visit the official Apto AI website here:
+            <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">https://aptoai.app/</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <h2>Start Managing Leads with Apto AI</h2>
+
+      <p>
+        If your business depends on enquiries, callbacks, sales follow-ups, and team coordination,
+        Apto AI can help you build a smarter CRM workflow for better control and better conversion.
+      </p>
+
+      <div class="cta-buttons">
+        <a class="btn btn-outline" href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+        <a class="btn btn-outline" href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Explore AI CRM</a>
+        <a class="btn btn-outline" href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">Request Demo</a>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      © Apto AI | AI CRM Software | Lead Management CRM | Sales Automation CRM |
+      <a href="https://aptoai.app/" target="_blank" rel="noopener noreferrer">https://aptoai.app/</a>
+    </div>
+
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://aptoai.app/#software",
+        "name": "Apto AI",
+        "url": "https://aptoai.app/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Apto AI is an AI CRM platform for lead management, sales automation, follow-up tracking, pipeline visibility, enquiry handling, and better sales conversion.",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://aptoai.app/"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aptoai.app/#website",
+        "name": "Apto AI",
+        "url": "https://aptoai.app/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://aptoai.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Apto AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apto AI is an AI-powered CRM platform that helps businesses manage enquiries, sales activity, follow-ups, lead ownership, and pipeline tracking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can Apto AI improve lead management?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apto AI gives sales teams a structured system to capture leads, track conversations, assign responsibility, plan follow-ups, and reduce missed opportunities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Apto AI useful for sales teams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Apto AI is useful for sales teams that need better visibility over incoming enquiries, pending follow-ups, active leads, and conversion movement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I explore Apto AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can visit the official Apto AI website at https://aptoai.app/."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
